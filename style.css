@@ -1,0 +1,384 @@
+* {
+	box-sizing: border-box;
+}
+body {
+font-family: "sans serif", "Times New Roman", Times, serif
+}
+@font-face {
+	font-family: dance;
+	src: url("/DancingScript-VariableFont_wght.ttf");
+}
+/****************************** Grid settings ********************************************/
+#main {
+	display: grid;	/* Create flex items between media and text */
+	grid-template-columns: 1fr 5fr;
+}
+#article {	/* Text on each page */
+	padding: 1% 2% 1% 2%;
+	font-size: 150%;
+	max-width: 100%;
+}
+#media {	/* flex item for media on all pages exept installation and cost */
+	margin: 5% 1% 1% 2%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 2px;
+}
+#media-grid {	/* installation page due to many pictures */
+	margin: 5% 1% 1% 2%;	/* top margin compensates for align-content moving items down */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2px;
+	align-content: start;	/* Prevent gaps between the items to compensate for height of page */
+}
+section {	/* Flex section displaying before and after weights on installation page */
+	display: flex;
+	justify-content: space-evenly;
+}
+section div {	/* Flex section displaying before and after weights on installation page */
+	background-color: white;
+	border: 4px solid grey;
+	padding: 1%;
+}
+section div p {	/* Flex section displaying before and after weights on installation page */
+	text-align: center;
+}
+/************************************************************************************************/
+
+a {	/* Cursor changing to pointer over link elements */
+	cursor: pointer;
+}
+article a:hover { /* link to external web pages */
+	color: red;
+	transform: scale(1.1);
+}
+article a:active {
+	color: purple;
+}
+#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {	/* navigation bar settings */
+	text-align: center;
+	position: fixed;	/*Added fixed position to allow for the menu to scroll */
+	width: 99%;
+	margin: -80px 0 0 0;	/* Moved to the top to display the header */
+	
+}
+/************************************ responsive design settings **********************************************/
+@media (min-width: 900px) {
+	#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {
+		margin: -80px 0 0 0;
+	}
+}
+@media (max-width: 900px) {	/* Medium and small screens changes */
+	#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {
+		margin-top: -4%;
+		width: 98.2%;
+		font-size: 1.2vw;
+	}
+	#main {	/* moving the images to above the footer */
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+	}
+	#media {
+		display: flex;
+	}
+	#media-grid {
+		display: flex;
+	}
+	#boat img, #diesel img, #electrics img, #arduino img, #power img {
+		width: 80%;
+	}
+	video {
+		width: 80%;
+	}
+}
+@media (max-width: 600px) {	/* Small nav menu screens changes */
+	#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {
+		margin-top: -4%;
+		width: 97.4%;
+		font-size: 42%;
+	}
+}
+nav ul {
+   /*list-style: none; *//*not necessary*/
+	background: linear-gradient(90deg, 
+	rgba(255, 255, 255, 0) 0%, 
+	rgba(255, 255, 255, 0.3) 25%, 
+	rgba(255, 255, 255, 0.3) 75%, 
+	rgba(255, 255, 255, 0) 100%);
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2),
+	inset 0 0 1px rgba(255, 255, 255, 0.6);
+	padding-left: 0; /* All lists automatically has left padding ~ 40px */
+}
+nav ul li {
+	display: inline-block;
+	padding: 6px 18px 6px 18px;
+	margin: 1px 1px 1px 1px;
+}
+nav ul li a {
+	color: black;
+	font-size: 200%;
+	font-family: Arial;
+	text-decoration: none;
+}
+.shade ul li a {
+text-shadow: 2px 2px 4px grey;
+}
+nav a:visited {
+	color: #8c8c8c;
+}
+nav a:hover {
+	display: inline-block;	/* Neccessary to scale up nav buttons */
+	animation: nav_buttons 300ms 1 forwards;    /* shorthand */
+}
+@keyframes nav_buttons {
+	100% {
+		transform: scale(1.2);
+		color: #FF790E;	/*orange*/
+	}
+}
+header {
+	margin-top: 4%;	/*Added margin top to allow for the fixed nav bar*/
+	text-align: center;
+	column-span: all;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.6);
+	text-shadow: 1px 1px 4px grey;
+	padding: 1px 0 1px 0;
+}
+#intro header {
+	margin-top: -4%;
+}
+h1 {
+	font-size: 300%;
+}
+h3 {
+	font-size: 200%;
+}
+.text {
+	font-size: 20pt;
+	line-height: 30pt;
+}
+sup {
+    line-height: 0;
+    font-size: medium;
+}
+sub {
+    line-height: 0;
+}
+/*.text a {
+	color: red;
+	text-decoration: none;
+	display: inline-block;
+	padding-left: 10px;
+}
+.text a:hover, */cost a:active {
+	color: green;
+	transform: scale(1.2);
+}
+video {
+	max-width: 100%;
+	/*width: 200px;*/
+}
+img {
+	border: 1px solid;
+	max-width: 100%;
+	/*width: 200px;*/
+}
+#intro img:hover, #boat img:hover, #diesel img:hover, #electrics img:hover, #arduino img:hover, #power img.hover {
+	animation: image_float 400ms 1 100ms forwards; /* shorthand */
+}
+@keyframes image_float {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+.subhead {	/* subheader setting */
+	font-weight: bold;
+	text-decoration: underline;
+}
+footer {
+	position: absolute;
+	width: 99%;
+	margin: auto;
+	bottom: 1%;
+}
+/********************************	INTRO		*******************************************/
+#html {
+	background: linear-gradient(0deg, #f7fed0, #264f75);
+}
+#intro {
+	text-align: center;
+	font-family: "Times New Roman", "sans serif", Times, serif;
+	height: 100%;
+	color: white;
+	/*background: linear-gradient(0deg, #f7fed0, #264f75);*/
+	text-shadow: 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black, -1px -1px 5px black;
+}
+#intro header {
+	margin: 1% 0 0 0;
+	text-shadow: 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black, -1px -1px 5px black;
+}
+/*#intro ul li a {
+	color: white;
+}*/
+#intro nav a {
+	color: #FF790E;
+}
+#subheader {
+	margin-top: 20px;
+	font-size: 250%;
+}
+#subheader a {
+	font-family: dance;
+	font-size: 120%;
+	color: #FF790E;	/*orange*/
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	width: 20vw; /*viewport avoids small screen issues*/
+	margin: auto;	/*centers the button*/
+}
+#intro-img {
+	margin: auto;
+}
+#intro img {
+	margin-top: 2%;
+	margin-bottom: 4%;
+	width: 400px;
+}
+#intro a:visited {
+	color: #acacac;
+	text-shadow: none;
+}
+#intro nav a:hover, #subheader a:hover {
+	display: inline-block;	/* Without this one the nav buttons won't scale up */
+	animation: intro_buttons 300ms 1 forwards;  /* shorthand */
+}
+@keyframes intro_buttons {
+	100% {	
+		color: #FF790E;	/*orange*/
+		transform: scale(1.2);
+	}
+}
+#subheader a:active {
+	color: red;
+	transform: scale(0.9);
+}
+#intro .text {
+	font-size: 200%;
+	line-height: 40pt;
+	margin: 0 20% 5% 20%;
+}
+.color-white {
+	color: white;
+}
+
+/************************************	BOAT	****************************************/
+#boat {
+	text-shadow: -2px -2px 0 white, 2px 2px 0 white;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("images/backgrounds/layout.png") no-repeat center;
+}
+/********************************	DIESEL	******************************************/
+#diesel {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("images/backgrounds/VolvoBackground.jpg");
+}
+/********************************** ELECTRICS *****************************************/
+#electrics {
+	text-shadow: -2px -2px 0 white, 2px 2px 0 white;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("images/backgrounds/EV200pcb.png");
+}
+#electrics .left {
+	padding-top: 30px;
+}
+
+/**********************************	ARDUINO	********************************************/
+#arduino {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("images/backgrounds/ArduinoBg.png") no-repeat center;
+}
+#arduino .media {
+	padding-top: 20px;
+}
+/**********************************	POWER ************************************************/
+#power {
+	background-color: #fffded;
+}
+#power .media {
+	padding-top: 40px;
+}
+/********************************** COST *************************************************/
+#cost {
+	text-align: center;
+	font-family: dance;
+	color: orange;
+	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	background: /*linear-gradient(to bottom, rgba(200, 200, 200, 0.55) 0%, rgba(200, 200, 200, 0.75) 100%), */url("images/backgrounds/chart.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+#cost nav ul li a {
+	color: orange;
+	font-family: dance;
+}
+#cost nav a:visited {
+	color: grey;
+}
+#cost nav a:hover, nav a:active, #intro nav a:active {
+	color: red;
+	transform: scale(1.2);
+}
+#cost nav a:active {
+	color: white;
+	transform: scale(1.2);
+}
+#cost h1 {
+	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+#cost img {
+	width: 400px;
+}
+#cost img:hover {
+	animation: pickup 500ms forwards;
+}
+@keyframes pickup {
+	0% {
+		transform: scale(1.0) rotate(7deg);
+	}
+	100% {
+		transform: scale(1.4) rotate(-1deg);
+		z-index: 1;
+	}
+}
+#cost address {
+	font-weight: bold;
+	text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+}
+#cost .rotate {
+	transform: rotate(7deg);
+	height: 540px;
+	padding-top: 20px;
+	border: none;
+}
+/****************************** FOOTER ***********************************/
+footer {
+	position: relative;
+	/*bottom: 1%;
+	margin: auto;*/
+	text-align: center;
+	font-size: 24pt;
+}
+address a {
+	color: red;
+	font-family: Arial;
+	font-size: 16pt;
+	text-decoration: none;
+	display: inline-block;
+	padding-left: 4px;
+}
+address a:hover {
+	color: green;
+	transform:scale(1.05);
+}

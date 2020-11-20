@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+		<script defer src="script.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.6">
+		<title>Arduino CAN bus battery monitor</title>
+		<link rel="stylesheet" content="text/css" href="styleJS.css">
+	</head>
+	<body id="arduino">
+		<nav class="shade">
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="boat.html">Boat</a></li>
+				<li><a href="diesel.html">Removal</a></li>
+				<li><a href="electrics.html">Installation</a></li>
+				<li><a href="power.html">Performance</a></li>
+				<li><a href="cost.html">Cost</a></li>
+			</ul>
+		</nav>	
+		<header>
+			<h1>The Arduino Battery Monitor</h1>
+			<h2>Instead of buying an expensive piece of equipment, why not make it yourself?</h2>
+		</header>
+		<main id="main">
+			<div id="media">
+				<a href="images/arduino/Arduino1.jpg"><img src="thumbnails/arduino1.png" alt="Testing with CAN bus"></a>
+				<a href="images/arduino/Arduino2.jpg"><img src="thumbnails/arduino2.png" alt="Connected to OLED displays"></a>
+				<a href="images/arduino/Arduino3.jpg"><img src="thumbnails/arduino3.png" alt="BMS diagnostic page"></a>
+				<video controls><source src="video/monitor.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+				<video controls><source src="video/demo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+			</div>
+			<article id="article">
+				<p class="subhead">BMS principle</p>
+				<p><a title="External link in New Tab" href="https://en.wikipedia.org/wiki/Battery_management_system" target="_blank">Battery management systems</a> (BMS) can be quite expensive but are an essential part of the equipment when dealing with Lithium battery technology, as they don't like being depleted or charged excessively.</p>
+				<p>We require something to tell us the status and also safeguard us from these undesirable conditions as we can't monitor them at all times during usage and charging. That's where the BMS comes in.<br /> They are devices with several sensors and inputs effectively controlling contactors and relays (electrically operated switches) cutting off appliances should there be a need for this.</p>
+				<p class="subhead">Which one?</p>
+				<p>There are several manufacturers of BMS with significant price variations. The quality of the system is essential for the safety, reliability and durability of the system. I wanted a unit separated from the cells itself for protection from moisture, be able to customise data output, use <a class="ext_lnk" title="External Link in New Tab" href="https://en.wikipedia.org/wiki/CAN_bus" target="_blank">CAN bus</a> and have good cell balancing algorithm and capacity.</p>
+				<p>The <em>Orion Jr</em> from <a title="External link in New Tab" href="http://www.ewertenergy.com/" target="_blank">Ewert Energy Systems</a> offered me this and included an option with <em>CAN bus</em> interface, which is a universal way of transferring data, commonly used in automobiles.</p>
+				<p class="subhead">The instrument</p>
+				<p>The BMS itself in many cases require a display or instrument to give us information during usage. This is also an expensive piece of equipment which I found disappointing despite having purchased a well reputed one. I found it lacked the information I wanted but more frustratingly unable to store the state of charge when I turned the system off, essentially showing 100% battery capacity every time I turned the power back on regardless of the actual battery state.</p>
+				<p class="subhead">My solution</p>
+				<p>With the use of a CAN bus shield, 128x64 pixel OLED display, a single push button and an Arduino Uno this instrument is much more sophisticated than a &euro;250 battery monitor from a respectable	manufacturer and in my case for &frac15; of the price.</p>
+				<p class="subhead">The way it works</p>
+				<p>Information is received from the BMS via the CAN bus all easily customised through <em>Ewerts</em> computer software.</p>
+				<p><a title="External link in New Tab" href="https://www.arduino.cc/" target="_blank">Arduino</a> is the name of the mini computer that powers this instrument. It connects to a normal computer via USB and using the free compiler software, where I wrote a script that features a RPM style Watt gauge, battery state of charge, endurance, solar charging, shore power charging, cell data, temperatures, faults and more.</p>
+				<p>To create this program a little technical knowledge and patience comes a long way. The scripting language used here is some hybrid <a title="External link in New Tab" href="https://www.guru99.com/c-programming-language.html" target="_blank">C/C++</a> Arduino language to simplify programming for novices. With the internet full of great resources this turned out to be both fun and rewarding, not at all as hard as I'd first pictured it.</p>
+				<p>I have two independent instruments for redundancy. The cockpit instrument has the 3 most essential pages while the cabin has 5 including analog style volt and ammeter. A single push button is used to navigate the pages as well as change screen brightness and clear BMS faults.</p>
+				<p class="subhead">Assembly</p>
+				<p>The computer and display had to live somewhere protected and I found the best solution was to design a house on my free CAD software. I then 3D printed the parts and put it all together. Fun project I am really pleased with.<br />
+				The code is available at GitHub <a title="External link in New Tab" href="https://github.com/tomstor82/arduino-Battery-Monitor" target="_blank"><img src="/icons/iconfinder_github_273178.png" width="25px" height="25px" alt="GitHub" /></a> , however there is work in progress so do read the readme file first. <a href="power.html">more...</a></p>
+			</article>
+		</main>
+		<footer>
+			<address style="padding-top: 50px;">
+				<small>Tom Storeb&oslash; 2020 - contact: </small><a href="mailto:&#116;&#111;&#109;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#105;&#102;&#105;&#101;&#100;&#98;&#111;&#97;&#116;&#46;&#99;&#111;&#109;?subject=WebPage">&#116;&#111;&#109;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#105;&#102;&#105;&#101;&#100;&#98;&#111;&#97;&#116;&#46;&#99;&#111;&#109;</a>
+			</address>
+		</footer>
+	</body>
+</html>

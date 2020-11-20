@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.6">
+		<title>Electrical Boat</title>
+		<link rel="stylesheet" content="text/css" href="style.css">
+		<script>window.location="electricsJS.html"</script>
+	</head>
+	<body id="electrics">
+		<nav class="shade">
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="boat.html">Boat</a></li>
+				<li><a href="diesel.html">Removal</a></li>
+				<li><a href="arduino.html">Monitoring</a></li>
+				<li><a href="power.html">Performance</a></li>
+				<li><a href="cost.html">Cost</a></li>
+			</ul>
+		</nav>
+		<header>
+			<h1>Electric Propulsion</h1>
+  			<h2>10kW motor and 10kWh battery</h2>
+		</header>
+		<main id="main">
+			<div id="media-grid">
+						<a href="images/electrics/Battery1.jpg"><img src="thumbnails/battery1.png" alt="Battery shipment" ></a>
+				    	<a href="images/electrics/Battery2.jpg"><img src="thumbnails/battery2.png" alt="Pre-charging cells" ></a>
+						<a href="images/electrics/Motor1.jpg"><img src="thumbnails/motor1.png" alt="Motor unpacked" ></a>
+		    			<a href="images/electrics/Vector.jpg"><img src="thumbnails/vector.png" alt="Motor controller" ></a>
+			    		<a href="images/electrics/RelayPCB.jpg"><img src="thumbnails/relaypcb.png" alt="Creating PCB" ></a>
+				    	<a href="images/electrics/Coupling.jpg"><img src="thumbnails/coupling.png" alt="Installing Chassis" ></a>
+						<a href="images/electrics/Chassi.jpg"><img src="thumbnails/chassi.png" alt="Chassis ready" ></a>
+		    			<a href="images/electrics/Motor2.jpg"><img src="thumbnails/motor2.png" alt="Motor installed" ></a>
+			    		<a href="images/electrics/Wires.jpg"><img src="thumbnails/wires.png" alt="Cell tap wires to BMS" ></a>
+				    	<a href="images/electrics/Assembled.jpg"><img src="thumbnails/assembled.png" alt="Everything installed" ></a>
+						<video controls><source src="video/motor.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+					</div>
+			
+  			<article id="article">
+  			<p class="subhead">Getting the right motor and battery</p>
+<p>I realised early I'd paid almost twice the price for the motor and controller from a local reseller in relation to what I could have done through the official online retailer. Though I value the experience the reseller had with electric applications in marine environment and the helpful support they have offered, I have seen many "experts" charge handsomely for their expertise.</p>
+					<p>The motor and controller are from Golden Motors in China and consist of a brush less DC motor (BLDC), essentially an AC motor which is supplied with square pulsed AC in 3 phases, and a 500 A digital controller supplied by the batteries. Brushless motors offers greater reliability than brushed motors, this one also has a very high peak efficiency of 91%.</p>
+					<p class="subhead">Installating the motor</p>
+					<p>To use the original combined throttle and gear lever I connected the old throttle cable to a "hall effect" throttle located in the motor compartment. To regenerate power I put the gear lever in reverse. The regenerative capability is very limited though.</p>
+				<p>The motor is mounted onto a custom made stainless steel chassis bolted onto the old Volvo Penta 120S-E Sail drive and supported by the two old engine mount cushions. The drive and motor is connected with a two part splined adapter with a rubber bushing between them for vibration damping. This little piece has given me some grief as I failed to secure it from slipping fore and aft on the shafts. I also fitted a neopren seal between the motor and chassis for the dual purpose of taking up vibration and to prevent galvanic corrosion as the motor case is of aluminium.</p>
+				<p class="subhead">Finding space for the battery</p>
+				<p>Careful consideration was given to the placement of the battery cells. Power loss in long cables, balance of the boat, easy access and fire fighting was the main concerns. I have seen professionally done conversion where the battery banks have been placed underneat the salong benches which misses all these criterias. Unable to find room around the motor I decided to place what I could on an aluminium plate above, leaving 3 cells in front of the motor where the old house battery was located.</p>
+				<p>The battery bank is comprised of 16 Thundersky Winston LiFePo<sub>4</sub> cells which are tested to withstand in excess of 7000 cycles at 80% DOD and 8000 cycles at 70% DOD.</p>
+				<p class="subhead">Evaluation</p>
+				<p>The overheat protection in the motor, in the motor controller as well as 3 sensors on the cells connected to the BMS will give early warnings of an overheat condition. And the benefits of this battery location is that it enables utilisation of the original squirt hole for the fire extinguisher in the companionway steps for the entire system, as well as leave the centre of gravity if not better at least very near the same location as before the conversion. <a href="arduino.html">more...</a></p>
+				<section>
+				<div>
+					<p class="subhead">Before</p>
+					<ul>
+						<li>112kg - Diesel Engine</li>
+						<li>50kg - Led Acid Batteries</li>
+						<li>80kg - 90l diesel tank</li>
+						<li>40kg - Accessories</li>
+						<li class="subhead">282kg - Sum</li> <!-- Differs from the JS html -->
+					</ul>
+				</div>
+				<div>
+					<p class="subhead">After</p>
+					<ul>
+						<li>117kg - LiFePo<sub>4</sub> cells</li>
+						<li>17kg - Electric motor</li>
+						<li>12kg - Chassis</li>
+						<li>2,5kg - Motor controller</li>
+						<li>10kg - Accessories</li>
+						<li class="subhead">158,5kg - Sum</li> <!-- Differs from the JS html -->
+					</ul>
+				</div>
+			</section>
+</article>
+	</main>
+		<footer>
+			<address>
+				<small>Tom Storeb&oslash; 2020 - contact: </small><a href="mailto:&#116;&#111;&#109;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#105;&#102;&#105;&#101;&#100;&#98;&#111;&#97;&#116;&#46;&#99;&#111;&#109;?subject=WebPage">&#116;&#111;&#109;&#64;&#101;&#108;&#101;&#99;&#116;&#114;&#105;&#102;&#105;&#101;&#100;&#98;&#111;&#97;&#116;&#46;&#99;&#111;&#109;</a>
+			</address>
+		</footer>
+	</body>
+</html>
