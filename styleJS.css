@@ -16,7 +16,7 @@ font-family: "sans serif", "Times New Roman", Times, serif;
 }
 #article {	/* Text on each page */
 	padding: 1% 2% 1% 2%;
-	font-size: 150%;
+	font-size: 100%;
 	max-width: 100%;
 }
 #media {	/* grid setting for media display except installation page */
@@ -25,7 +25,7 @@ font-family: "sans serif", "Times New Roman", Times, serif;
 	grid-template-columns: 1fr; /* single column */
 	grid-row-gap: 2px;
 }
-#media-grid {	/* installation page due to many pictures */
+#media-grid {	/* boat and installation page due to many pictures */
 	margin: 5% 1% 1% 2%;	/* top margin compensates for align-content moving items down */
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* two columns with pictures */
@@ -116,7 +116,7 @@ nav ul li {
 }
 nav ul li a {
 	color: #000000;
-	font-size: 200%;
+	font-size: 150%;
 	font-family: Arial;
 	text-decoration: none;
 }
@@ -149,10 +149,10 @@ header {
 	margin-top: -4%;
 }
 h1 {
-	font-size: 300%;
+	font-size: 250%;
 }
 h3 {
-	font-size: 200%;
+	font-size: 150%;
 }
 .text {
 	font-size: 20pt;
@@ -230,7 +230,7 @@ footer {
 }
 #subheader {
 	margin-top: 20px;
-	font-size: 250%;
+	font-size: 200%;
 }
 #subheader a {
 	font-family: dance;
@@ -264,7 +264,7 @@ footer {
 	transform: scale(0.9);
 }
 #intro .text {
-	font-size: 200%;
+	font-size: 150%;
 	line-height: 40pt;
 	margin: 0 20% 5% 20%;
 }
@@ -349,7 +349,7 @@ footer {
 	margin-bottom: -1%;
 	column-span: all;
 	text-align: center;
-	font-size: 24pt;
+	font-size: 18pt;
 }
 address a {
 	color: red;
