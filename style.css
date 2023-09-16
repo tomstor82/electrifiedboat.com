@@ -72,7 +72,7 @@ article a:active {
 	#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {
 		margin-top: -4%;
 		width: 98.2%;
-		font-size: 1.2vw;
+		font-size: 1.5vw;
 	}
 	#main {	/* moving the images to above the footer */
 		display: flex;
@@ -96,7 +96,7 @@ article a:active {
 	#boat nav, #diesel nav, #electrics nav, #arduino nav, #power nav, #cost nav {
 		margin-top: -4%;
 		width: 97.4%;
-		font-size: 42%;
+		font-size: 1vw;
 	}
 }
 nav ul {
