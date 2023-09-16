@@ -18,16 +18,16 @@ font-family: "sans serif", "Times New Roman", Times, serif
 	font-size: 100%;
 	max-width: 100%;
 }
-#media {	/* flex item for media on all pages exept installation and cost */
+#media {	/* media grid performance page (3 pictures) */
 	margin: 5% 1% 1% 2%;
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr; /* single column */
 	grid-row-gap: 2px;
 }
-#media-grid {	/* installation page due to many pictures */
+#media-grid {	/* media grid for all pages with 4+ pictures */
 	margin: 5% 1% 1% 2%;	/* top margin compensates for align-content moving items down */
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr); /* two columns with pictures */
 	grid-gap: 2px;
 	align-content: start;	/* Prevent gaps between the items to compensate for height of page */
 }
