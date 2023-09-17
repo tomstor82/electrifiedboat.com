@@ -105,7 +105,7 @@
 		echo "Nice to see you and have a lovely day.";
 	}
 	// Delete error log created by the ridiculous $visitors incrementation as ++ does not work in this shite
-	if (file_exists("error_log"))	unlink(error_log);
+	if (file_exists("error_log"))	unlink("error_log");
 	
 ?>
 			</div>
