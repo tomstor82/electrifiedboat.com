@@ -113,10 +113,10 @@
 			<h3>Here's how you can save money and do it youself</h3>
 			<nav>
 				<ul>
-					<li><a href="diesel.html">Removal</a></li>
-					<li><a href="electrics.html">Installation</a></li>
-					<li><a href="arduino.html">Monitoring</a></li>
-					<li><a href="power.html">Performance</a></li>
+					<li><a href="diesel.html">Strip</a></li>
+					<li><a href="electrics.html">Electrifying</a></li>
+					<li><a href="arduino.html">Magic</a></li>
+					<li><a href="power.html">Power</a></li>
 					<li><a href="cost.html">Cost</a></li>
 				</ul>
 			</nav>
